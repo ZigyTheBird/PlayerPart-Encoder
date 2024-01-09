@@ -1,3 +1,6 @@
+package playerpartencoder;
+
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -6,7 +9,7 @@ public class PlayerParts {
     public static int x = 0;
     public static List<Boolean> list = new ArrayList<>();
 
-    public int toInt() {
+    public String toLong() {
         list.addAll(this.body.toList());
         list.addAll(this.head.toList());
         list.addAll(this.torso.toList());
@@ -27,15 +30,8 @@ public class PlayerParts {
             }
         }
 
-        int val = 0;
-        for (char c : binary.toString().toCharArray()) {
-            val <<= 1;
-            val += c-'0';
-        }
-        if (val < 100) {
-            val += 512;
-        }
-        return val;
+        BigInteger val = new BigInteger(binary.toString(), 2);
+        return val.toString(Character.MAX_RADIX);
     }
 
     public PlayerPart body = new PlayerPart();

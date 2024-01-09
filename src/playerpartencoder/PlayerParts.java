@@ -9,7 +9,7 @@ public class PlayerParts {
     public static int x = 0;
     public static List<Boolean> list = new ArrayList<>();
 
-    public String toLong() {
+    public String encode() {
         list.addAll(this.body.toList());
         list.addAll(this.head.toList());
         list.addAll(this.torso.toList());

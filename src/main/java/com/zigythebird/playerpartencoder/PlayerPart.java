@@ -1,4 +1,4 @@
-package playerpartencoder;
+package com.zigythebird.playerpartencoder;
 
 import java.util.ArrayList;
 import java.util.List;

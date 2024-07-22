@@ -1,4 +1,4 @@
-package playerpartencoder;
+package com.zigythebird.playerpartencoder;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
